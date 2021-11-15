@@ -79,16 +79,23 @@ string2="java"
 print(string2[0]+string1[1::]+string1[1]+string2[1::]+str(len(string1))+str(len(string2)))
 
 """""
-"""
 #ANSWER
-str1="madam"
-print(str1)
-str2=list(str1)
+str1=-121
+print(type(str1))
+str2=str(str1)
+if str2[0] == '-':
+    y = '-'
+    x1 = str2[1::]
+else:
+    x1 = str2
+print(x1)
+str2=list(str(abs(str1)))
 str2.reverse()
-str3="".join(str2)
-if str3==str1:
+str3=y+"".join(str2)
+str3=int(str3)
+print(str3)
+if (str3)==(str1):
     print("both string match")
 else:
     print("doesnt match")
 print("complete")
-"""
